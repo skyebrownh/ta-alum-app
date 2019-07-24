@@ -107,3 +107,8 @@
 .sub-info .latlong {
   display: none;
 }
+
+.sub-info .linkedin .no-profile {
+  margin: 0;
+  font-size: 0.8rem;
+}

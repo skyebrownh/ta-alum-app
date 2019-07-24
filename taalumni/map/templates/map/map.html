@@ -26,7 +26,8 @@
         <div class="popup-info" id="{{ key }}">
           <div class="popup-header">
             <div class="crop">
-              <img src="/static/images/Skye.jpg" alt="member photo" class="popup-img" />
+              <!-- FIXME: image -->
+              <img src="/static/images/Skye.jpg" alt="{{ value.object.first_name }} {{ value.object.last_name }}" class="popup-img" />
             </div>
             <div class="vertical-divider"></div>
             <div class="person-info">
@@ -57,7 +58,12 @@
             <div class="linkedin">
               <i class="icon fab fa-lg fa-linkedin-in"></i>
               <p class="linkedin-link">
-                <a href="{% if value.object.linkedin %}{{ value.object.linkedin }}{% else %}#{% endif %}" target="_blank">View LinkedIn Profile</a>
+                <!-- check if linkedin url is given before showing link to profile -->
+                {% if value.object.linkedin %}
+                  <a href="{{ value.object.linkedin }}" target="_blank">View LinkedIn Profile</a>
+                {% else %}
+                  <p class="no-profile">No LinkedIn profile for {{ value.object.first_name }} {{ value.object.last_name }}</p>
+                {% endif %}
               </p>
             </div>
           </div>
@@ -65,6 +71,7 @@
       {% endfor %}
     </ul>
   </div>
+  <!-- placeholder for map display rendered in js -->
   <div id="mapid"></div>
   <!-- model variables passed to js -->
   <script>
