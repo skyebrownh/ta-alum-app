@@ -1,0 +1,109 @@
+#mapid { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0; 
+}
+
+.member-group {
+  display: none;
+}
+
+/* POPUP INFO */
+.popup-info {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* ---- popup header */
+.popup-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.popup-header .crop {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.popup-header .crop .popup-img {
+  /* TODO: values are specific to sample image */
+  width: 175px;
+  height: 145px;
+  margin: -45px 0 0 -56px;
+}
+
+.popup-header .vertical-divider {
+  background: #333;
+  height: 100%;
+  width: 1.4px;
+}
+
+.popup-header .person-info {
+  flex-basis: 70%;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.popup-header h2 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.popup-header .position {
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 100;
+  margin: 0 0 10px 0;
+}
+
+/* ---- sub info */
+.sub-info {
+  font-size: 0.85rem;
+}
+
+.sub-info .icon {
+  width: 60px;
+}
+
+.sub-info .location,
+.sub-info .email,
+.sub-info .linkedin {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 100%;
+}
+
+.sub-info p {
+  text-align: left;
+  margin-left: 15px;
+  font-weight: 100;
+}
+
+.sub-info a,
+.sub-info a:hover,
+.sub-info a:visited {
+  color: #333;
+}
+
+.sub-info a:active {
+  color: red;
+}
+
+.sub-info .location .company,
+.sub-info .location .location-point {
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.sub-info .latlong {
+  display: none;
+}

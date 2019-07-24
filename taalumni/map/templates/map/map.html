@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Team Alpha Alumni | Map</title>
+  <!-- leaflet css -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <!-- leaflet js -->
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+  <!-- fontawesome cdn -->
+  <script src="https://kit.fontawesome.com/d5ec8328e0.js"></script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="{% static 'css/map.css' %}">
+</head>
+<body>
+  <div class="member-group">
+    <ul>
+      {% for key, value in members.items %}
+        <div class="popup-info" id="{{ key }}">
+          <div class="popup-header">
+            <div class="crop">
+              <img src="/static/images/Skye.jpg" alt="member photo" class="popup-img" />
+            </div>
+            <div class="vertical-divider"></div>
+            <div class="person-info">
+              <h2>{{ value.object.first_name }} {{ value.object.last_name }}</h2>
+              <p class="position">{{ value.object.position }}</p>
+            </div>
+          </div>
+          <div class="sub-info">
+            <div class="location">
+              <i class="icon fas fa-lg fa-map-marker-alt"></i>
+              <p>
+                <!-- add non-breaking space between two spans -->
+                <span class="company">{{ value.object.company }},&nbsp;</span>
+                <!-- create lat and long elements to give map.js values for map marker (hide element at all times) -->
+                <div class="latlong">
+                  <span id="lat">{{ value.lat }}</span>
+                  <span id="long">{{ value.long }}</span>
+                </div>
+                <span class="location-point">{{ value.object.city }}, {{ value.object.state }}</span>
+              </p>
+            </div>
+            <div class="email">
+              <i class="icon fas fa-lg fa-envelope"></i>
+              <p class="email-address">
+                <a href="#">{{ value.object.email }}</a>
+              </p>
+            </div>
+            <div class="linkedin">
+              <i class="icon fab fa-lg fa-linkedin-in"></i>
+              <p class="linkedin-link">
+                <a href="{% if value.object.linkedin %}{{ value.object.linkedin }}{% else %}#{% endif %}" target="_blank">View LinkedIn Profile</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="mapid"></div>
+  <!-- model variables passed to js -->
+  <script>
+    const num_members = "{{ num_members }}";
+  </script>
+  <!-- custom js -->
+  <script src="{% static 'js/map.js' %}"></script>
+</body>
+</html>
