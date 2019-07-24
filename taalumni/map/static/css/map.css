@@ -34,7 +34,7 @@
 }
 
 .popup-header .crop .popup-img {
-  /* TODO: values are specific to sample image */
+  /* FIXME: values are specific to sample image */
   width: 175px;
   height: 145px;
   margin: -45px 0 0 -56px;

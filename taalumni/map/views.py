@@ -5,7 +5,6 @@ from .models import Member
 import googlemaps
 from .constants import API_KEY
 
-# Create your views here.
 def mapView(request):
   num_members = Member.objects.count()
   context = {
