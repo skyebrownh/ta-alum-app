@@ -14,6 +14,11 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
   crossorigin=""></script>
+  <!-- leaflet marker cluster css -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+  <!-- leaflet marker cluster js -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
   <!-- fontawesome cdn -->
   <script src="https://kit.fontawesome.com/d5ec8328e0.js"></script>
   <!-- custom css -->
@@ -76,6 +81,7 @@
   <!-- model variables passed to js -->
   <script>
     const num_members = "{{ num_members }}";
+    const deleted_members = "{{ deleted_members }}";
   </script>
   <!-- custom js -->
   <script src="{% static 'js/map.js' %}"></script>

@@ -15,27 +15,39 @@ const icon = L.icon({
   iconSize: [40, 40],
 });
 
+// create marker cluster to group duplicate/geographically close markers
+const markerCluster = L.markerClusterGroup();
+
 // add marker and get popup info for each member
 for (let i = 1; i <= num_members; i++) {
-  // get this member's popup
-  const popupInfo = memberGroup.querySelector(`#member_${i}`);
+  // only continue if this member is not in deleted_members
+  if (!deleted_members.includes(i)) {
+    // get this member's popup
+    const popupInfo = memberGroup.querySelector(`#member_${i}`);
 
-  // get lat, long and populate location to display marker
-  const latlong = popupInfo.querySelector('.latlong');
-  const latitude = parseInt(latlong.querySelector('#lat').textContent);
-  const longitude = parseInt(latlong.querySelector('#long').textContent);
-  
-  // use latitude, longitude for marker location
-  const marker = L.marker([latitude, longitude], {
-    icon: icon,
-    title: `${memberGroup.querySelector('.location-point')}`,
-    alt: `${memberGroup.querySelector('.location-point')}`,
-    riseOnHover: true,
-  }).addTo(map);
+    // get lat, long and populate location to display marker
+    const latlong = popupInfo.querySelector('.latlong');
+    const latitude = parseInt(latlong.querySelector('#lat').textContent);
+    const longitude = parseInt(latlong.querySelector('#long').textContent);
+    
+    // use latitude, longitude for marker location
+    const marker = L.marker([latitude, longitude], {
+      icon: icon,
+      title: `${memberGroup.querySelector('.location-point')}`,
+      alt: `${memberGroup.querySelector('.location-point')}`,
+      riseOnHover: true,
+      riseOffset: 250
+    });
 
-  const boundMarker = marker.bindPopup(popupInfo);
+    // add to marker cluster
+    markerCluster.addLayer(marker);
 
-  marker.addEventListener('click', () => {
-    boundMarker.openPopup();
-  });
+    const boundMarker = marker.bindPopup(popupInfo);
+
+    marker.addEventListener('click', () => {
+      boundMarker.openPopup();
+    });
+  }
 }
+
+map.addLayer(markerCluster);
