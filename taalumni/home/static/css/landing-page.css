@@ -1,13 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
 .wrapper {
   padding: 3rem;
   text-align: center;
@@ -20,7 +10,7 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
-a {
+#map-link {
   text-decoration: none;
   background: white;
   color: blue;
@@ -36,7 +26,7 @@ a {
   margin: 0 auto;
 }
 
-a:hover {
+#map-link:hover {
   background: blue;
   color: white;
 }

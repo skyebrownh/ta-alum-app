@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def landingPage(request):
-  return render(request, 'landing-page/landing-page.html')
+  return render(request, 'home/landing-page.html')
