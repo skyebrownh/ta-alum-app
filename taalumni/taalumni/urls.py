@@ -19,7 +19,7 @@ from django.urls import include, path
 from home import views
 
 urlpatterns = [
-    path('', views.landingPage),
-    path('map/', include('map.urls')),
+    path('', views.landingPage, name='landing-page'),
+    path('map/', include('map.urls', namespace='map')),
     path('admin/', admin.site.urls),
 ]
