@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block subtitle %}Landing Page{% endblock subtitle %}
+
+{% block custom-css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/landing-page.css' %}">
+{% endblock custom-css %}
+
+{% block content %}
+  <div class="wrapper">
+    <h1>Team Alpha Alumni</h1>
+    <a href="{% url 'map:map_view' %}" id="map-link">Go to Map</a>
+  </div>
+{% endblock content %}

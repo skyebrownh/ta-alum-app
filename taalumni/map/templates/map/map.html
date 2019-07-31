@@ -1,11 +1,9 @@
+{% extends "base/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Team Alpha Alumni | Map</title>
+
+{% block subtitle %}Map{% endblock subtitle %}
+
+{% block links-scripts %}
   <!-- leaflet css -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -21,10 +19,13 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
   <!-- fontawesome cdn -->
   <script src="https://kit.fontawesome.com/d5ec8328e0.js"></script>
-  <!-- custom css -->
+{% endblock links-scripts %}
+
+{% block custom-css %}
   <link rel="stylesheet" href="{% static 'css/map.css' %}">
-</head>
-<body>
+{% endblock custom-css %}
+
+{% block content %}
   <div class="member-group">
     <ul>
       {% for key, value in members.items %}
@@ -85,5 +86,4 @@
   </script>
   <!-- custom js -->
   <script src="{% static 'js/map.js' %}"></script>
-</body>
-</html>
+{% endblock content %}
