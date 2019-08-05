@@ -13,8 +13,8 @@ class Member(models.Model):
   state = models.CharField(max_length=30) # state abbreviation
   latitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   longitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
-  email = models.EmailField(blank=True)
-  linkedin = models.URLField(blank=True)
+  email = models.EmailField(null=True)
+  linkedin = models.URLField(null=True)
   # TODO: image
 
   def __str__(self):
