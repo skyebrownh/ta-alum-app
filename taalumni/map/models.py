@@ -4,13 +4,13 @@ import googlemaps
 from .constants import API_KEY
 
 class Member(models.Model):
-  first_name = models.CharField(max_length=30)
-  last_name = models.CharField(max_length=30)
-  company = models.CharField(max_length=50, blank=True)
-  position = models.CharField(max_length=50, blank=True)
+  first_name = models.CharField(max_length=50)
+  last_name = models.CharField(max_length=50)
+  company = models.CharField(max_length=255, blank=True)
+  position = models.CharField(max_length=255, blank=True)
   # location
-  city = models.CharField(max_length=60)
-  state = models.CharField(max_length=30) # state abbreviation
+  city = models.CharField(max_length=100)
+  state = models.CharField(max_length=50) # state abbreviation
   latitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   longitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   email = models.EmailField(null=True)
