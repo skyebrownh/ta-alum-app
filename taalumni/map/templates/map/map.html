@@ -38,7 +38,9 @@
             <div class="vertical-divider"></div>
             <div class="person-info">
               <h2>{{ value.object.first_name }} {{ value.object.last_name }}</h2>
-              <p class="position">{{ value.object.position }}</p>
+              {% if value.object.position %}
+                <p class="position">{{ value.object.position }}</p>
+              {% endif %}
             </div>
           </div>
           <div class="sub-info">
@@ -46,7 +48,9 @@
               <i class="icon fas fa-lg fa-map-marker-alt"></i>
               <p>
                 <!-- add non-breaking space between two spans -->
-                <span class="company">{{ value.object.company }},&nbsp;</span>
+                {% if value.object.company %}
+                  <span class="company">{{ value.object.company }},&nbsp;</span>
+                {% endif %}
                 <!-- create lat and long elements to give map.js values for map marker (hide element at all times) -->
                 <div class="latlong">
                   <span id="lat">{{ value.object.latitude }}</span>
@@ -58,7 +62,11 @@
             <div class="email">
               <i class="icon fas fa-lg fa-envelope"></i>
               <p class="email-address">
-                <a href="#">{{ value.object.email }}</a>
+                {% if value.object.email %}
+                  <a href="#">{{ value.object.email }}</a>
+                {% else %}
+                  <span class="blank">None</span>
+                {% endif %}
               </p>
             </div>
             <div class="linkedin">

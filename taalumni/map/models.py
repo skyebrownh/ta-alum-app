@@ -6,14 +6,14 @@ from .constants import API_KEY
 class Member(models.Model):
   first_name = models.CharField(max_length=30)
   last_name = models.CharField(max_length=30)
-  company = models.CharField(max_length=50)
-  position = models.CharField(max_length=50)
+  company = models.CharField(max_length=50, blank=True)
+  position = models.CharField(max_length=50, blank=True)
   # location
   city = models.CharField(max_length=60)
   state = models.CharField(max_length=30) # state abbreviation
   latitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   longitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
-  email = models.EmailField()
+  email = models.EmailField(blank=True)
   linkedin = models.URLField(blank=True)
   # TODO: image
 
