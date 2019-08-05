@@ -16,6 +16,10 @@
   text-align: center;
 }
 
+.popup-info .blank {
+  color: #787878;
+}
+
 /* ---- popup header */
 .popup-header {
   width: 100%;
@@ -111,4 +115,5 @@
 .sub-info .linkedin .no-profile {
   margin: 0;
   font-size: 0.8rem;
+  color: #787878;
 }
