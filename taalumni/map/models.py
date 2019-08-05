@@ -6,8 +6,9 @@ from .constants import API_KEY
 class Member(models.Model):
   first_name = models.CharField(max_length=50)
   last_name = models.CharField(max_length=50)
-  company = models.CharField(max_length=255, blank=True)
-  position = models.CharField(max_length=255, blank=True)
+  # NOTE: using null on CharField is bad practice. Only use for importing existing data then change back to blank=True instead
+  company = models.CharField(max_length=255, null=True)
+  position = models.CharField(max_length=255, null=True)
   # location
   city = models.CharField(max_length=100)
   state = models.CharField(max_length=50) # state abbreviation
