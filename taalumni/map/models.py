@@ -7,15 +7,15 @@ class Member(models.Model):
   first_name = models.CharField(max_length=50)
   last_name = models.CharField(max_length=50)
   # NOTE: using null on CharField is bad practice. Only use for importing existing data then change back to blank=True instead
-  company = models.CharField(max_length=255, null=True)
-  position = models.CharField(max_length=255, null=True)
+  company = models.CharField(max_length=255, blank=True, default='')
+  position = models.CharField(max_length=255, blank=True, default='')
   # location
   city = models.CharField(max_length=100)
   state = models.CharField(max_length=50) # state abbreviation
   latitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   longitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
-  email = models.EmailField(null=True)
-  linkedin = models.URLField(null=True)
+  email = models.EmailField(blank=True, null=True)
+  linkedin = models.URLField(blank=True, null=True)
   # TODO: image
 
   def __str__(self):
