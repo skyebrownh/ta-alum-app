@@ -13,8 +13,8 @@ h1 {
 #map-link {
   text-decoration: none;
   background: white;
-  color: blue;
-  border: 1px solid blue;
+  color: red;
+  border: 1px solid red;
   padding: 1.5rem 1rem;
   border-radius: 5px;
   box-shadow: 0 1px 5px #ccc;
@@ -22,12 +22,12 @@ h1 {
   letter-spacing: 1px;
   font-weight: 400;
   display: block;
-  width: 50%;
+  width: 35%;
   margin: 0 auto;
 }
 
 #map-link:hover {
-  background: blue;
+  background: red;
   color: white;
 }
 
