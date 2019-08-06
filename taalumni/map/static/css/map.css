@@ -62,7 +62,7 @@
 }
 
 .popup-header .position {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-style: italic;
   font-weight: 100;
   margin: 0 0 10px 0;
@@ -105,7 +105,7 @@
 .sub-info .location .company,
 .sub-info .location .location-point {
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .sub-info .latlong {
