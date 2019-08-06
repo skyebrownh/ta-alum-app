@@ -4,17 +4,18 @@ import googlemaps
 from .constants import API_KEY
 
 class Member(models.Model):
-  first_name = models.CharField(max_length=30)
-  last_name = models.CharField(max_length=30)
-  company = models.CharField(max_length=50)
-  position = models.CharField(max_length=50)
+  first_name = models.CharField(max_length=50)
+  last_name = models.CharField(max_length=50)
+  # NOTE: using null on CharField is bad practice. Only use for importing existing data then change back to blank=True instead
+  company = models.CharField(max_length=255, blank=True, default='')
+  position = models.CharField(max_length=255, blank=True, default='')
   # location
-  city = models.CharField(max_length=60)
-  state = models.CharField(max_length=30) # state abbreviation
+  city = models.CharField(max_length=100)
+  state = models.CharField(max_length=50) # state abbreviation
   latitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   longitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
-  email = models.EmailField()
-  linkedin = models.URLField(blank=True)
+  email = models.EmailField(blank=True, null=True)
+  linkedin = models.URLField(blank=True, null=True)
   # TODO: image
 
   def __str__(self):
