@@ -46,16 +46,16 @@
           <div class="sub-info">
             <div class="location">
               <i class="icon fas fa-lg fa-map-marker-alt"></i>
+              <!-- create lat and long elements to give map.js values for map marker (hide element at all times) -->
+              <div class="latlong">
+                <span id="lat">{{ value.object.latitude }}</span>
+                <span id="long">{{ value.object.longitude }}</span>
+              </div>
               <p>
                 <!-- add non-breaking space between two spans -->
                 {% if value.object.company %}
-                  <span class="company">{{ value.object.company }},&nbsp;</span>
+                  <span class="company">{{ value.object.company }}</span>
                 {% endif %}
-                <!-- create lat and long elements to give map.js values for map marker (hide element at all times) -->
-                <div class="latlong">
-                  <span id="lat">{{ value.object.latitude }}</span>
-                  <span id="long">{{ value.object.longitude }}</span>
-                </div>
                 <span class="location-point">{{ value.object.city }}, {{ value.object.state }}</span>
               </p>
             </div>
