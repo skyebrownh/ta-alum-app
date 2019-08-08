@@ -71,5 +71,7 @@ venv.bak/
 .history.vscode/settings.json
 **/.vscode/
 
-# AWS
-.elasticbeanstalk/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
