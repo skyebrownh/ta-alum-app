@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fd887bd299c2c9b9f7c40ba1406ecf9bf0589ee1e2ba4387a4db4e37e86615d0"
+            "sha256": "2e39d16e030d39d5ff3ae63a5f491dfccbc8232cbdd895ecd68b267b3ca63950"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,14 @@
         ]
     },
     "default": {
+        "awscli": {
+            "hashes": [
+                "sha256:3c943a6ff843143b0c73acaa4f10343417f1325d14c5d688740645a6d157b7be",
+                "sha256:79fa4dd31c4c236285b70dfed94fdaf4e46e1eed20f69e02879a2d57e9790d8d"
+            ],
+            "index": "pypi",
+            "version": "==1.16.213"
+        },
         "awsebcli": {
             "hashes": [
                 "sha256:9950995e348374d5957456a7cc74463e21f6aa0d0b5da539f6bc7e954493b887"
@@ -195,6 +203,13 @@
             "index": "pypi",
             "version": "==2.8.3"
         },
+        "pyasn1": {
+            "hashes": [
+                "sha256:3bb81821d47b17146049e7574ab4bf1e315eb7aead30efe5d6a9ca422c9710be",
+                "sha256:b773d5c9196ffbc3a1e13bdf909d446cad80a039aa3340bcad72f395b76ebc86"
+            ],
+            "version": "==0.4.6"
+        },
         "python-dateutil": {
             "hashes": [
                 "sha256:7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb",
@@ -224,6 +239,7 @@
                 "sha256:e01d3203230e1786cd91ccfdc8f8454c8069c91bee3962ad93b87a4b2860f537",
                 "sha256:e170a9e6fcfd19021dd29845af83bb79236068bf5fd4df3327c1be18182b2531"
             ],
+            "markers": "python_version != '2.6'",
             "version": "==3.13"
         },
         "requests": {
@@ -232,6 +248,20 @@
                 "sha256:ea881206e59f41dbd0bd445437d792e43906703fff75ca8ff43ccdb11f33f263"
             ],
             "version": "==2.20.1"
+        },
+        "rsa": {
+            "hashes": [
+                "sha256:25df4e10c263fb88b5ace923dd84bf9aa7f5019687b5e55382ffcdb8bede9db5",
+                "sha256:43f682fea81c452c98d09fc316aae12de6d30c4b5c84226642cf8f8fd1c93abd"
+            ],
+            "version": "==3.4.2"
+        },
+        "s3transfer": {
+            "hashes": [
+                "sha256:6efc926738a3cd576c2a79725fed9afde92378aa5c6a957e3af010cb019fac9d",
+                "sha256:b780f2411b824cb541dbcd2c713d0cb61c7d1bcadae204cdddda2b35cef493ba"
+            ],
+            "version": "==0.2.1"
         },
         "semantic-version": {
             "hashes": [
