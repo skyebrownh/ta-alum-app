@@ -70,3 +70,6 @@ venv.bak/
 !.vscode/extensions.json 
 .history.vscode/settings.json
 **/.vscode/
+
+# AWS
+.elasticbeanstalk/
