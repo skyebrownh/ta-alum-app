@@ -11,6 +11,7 @@ psycopg2-binary = "*"
 googlemaps = "*"
 awsebcli = "*"
 awscli = "*"
+sentry-sdk = "*"
 
 [requires]
 python_version = "3.7"
