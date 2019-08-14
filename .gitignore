@@ -34,8 +34,7 @@ MANIFEST
 local_settings.py
 
 # HOLDS SECRET KEY
-# taalumni/taalumni/settings.py
-taalumni/taalumni/constants.py
+taalumni/taalumni/settings.py
 
 # HOLDS Googlemaps API KEY
 taalumni/map/constants.py
