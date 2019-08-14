@@ -10,6 +10,7 @@ django = "*"
 psycopg2-binary = "*"
 googlemaps = "*"
 sentry-sdk = "*"
+awsebcli = "*"
 
 [requires]
 python_version = "3.7"
