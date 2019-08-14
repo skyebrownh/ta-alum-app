@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from home import views
+from . import views
 
 urlpatterns = [
     path('', views.landingPage, name='landing-page'),
