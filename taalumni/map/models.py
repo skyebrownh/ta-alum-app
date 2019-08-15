@@ -1,7 +1,7 @@
 from django.db import models
 
+import os
 import googlemaps
-from .constants import API_KEY
 
 class Member(models.Model):
   first_name = models.CharField(max_length=50)
@@ -29,7 +29,7 @@ class Member(models.Model):
       self.longitude = potential_location.longitude
     except Location.DoesNotExist:
       # geocode this member's city and state
-      gmaps = googlemaps.Client(key="{}".format(API_KEY))
+      gmaps = googlemaps.Client(key="{}".format(os.environ.get('GOOGLE_API_KEY')))
       geocode_result = gmaps.geocode("{}, {}".format(self.city, self.state))
       # set lat and long for this member to result of geocode
       self.latitude = geocode_result[0]["geometry"]["location"]["lat"]
