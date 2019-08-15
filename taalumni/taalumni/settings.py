@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['taalum-app-dev.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['taalum-app-dev.us-east-1.elasticbeanstalk.com', '172.31.15.62']
 
 
 # Application definition
