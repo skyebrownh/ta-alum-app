@@ -26,6 +26,7 @@
 {% endblock custom-css %}
 
 {% block content %}
+  {% if members %}
   <div class="member-group">
     <ul>
       {% for key, value in members.items %}
@@ -85,6 +86,7 @@
       {% endfor %}
     </ul>
   </div>
+  {% endif %}
   <!-- placeholder for map display rendered in js -->
   <div id="mapid"></div>
   <!-- model variables passed to js -->
