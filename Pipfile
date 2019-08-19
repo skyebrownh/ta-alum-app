@@ -12,6 +12,8 @@ googlemaps = "*"
 sentry-sdk = "*"
 awsebcli = "*"
 awscli = "*"
+django-storages = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.7"
