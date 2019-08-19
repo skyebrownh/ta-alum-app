@@ -16,7 +16,7 @@ class Member(models.Model):
   longitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   email = models.EmailField(blank=True, null=True)
   linkedin = models.URLField(blank=True, null=True)
-  # TODO: image
+  image = models.ImageField(upload_to="", null=True)
 
   def __str__(self):
     return "{} {}".format(self.first_name, self.last_name)
