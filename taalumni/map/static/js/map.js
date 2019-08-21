@@ -36,8 +36,8 @@ if (memberGroupList) {
     // use latitude, longitude for marker location
     const marker = L.marker([latitude, longitude], {
       icon: icon,
-      title: `${popupInfo.querySelector('.location-point')}`,
-      alt: `${popupInfo.querySelector('.location-point')}`,
+      title: `${popupInfo.querySelector('.location-point').textContent}`,
+      alt: `${popupInfo.querySelector('.location-point').textContent}`,
       riseOnHover: true,
       riseOffset: 250
     });
