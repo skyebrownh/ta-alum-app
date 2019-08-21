@@ -13,7 +13,7 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=bZBPrAxMk
 if (memberGroupList) {
   // create icon for marker
   const icon = L.icon({
-    iconUrl: aincIcon,
+    iconUrl: 'https://ta-alum-app.s3.amazonaws.com/images/ainc-logo-triangle-layer-red.png',
     iconSize: [40, 40],
   });
 
