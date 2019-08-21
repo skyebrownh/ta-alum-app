@@ -16,7 +16,7 @@ class Member(models.Model):
   longitude = models.DecimalField(max_digits=12, decimal_places=7, editable=False)
   email = models.EmailField(blank=True, null=True)
   linkedin = models.URLField(blank=True, null=True)
-  image = models.ImageField(upload_to="", blank=True, default='Skye-placeholder.jpg')
+  image = models.ImageField(upload_to="", default='Skye-placeholder.jpg')
 
   def __str__(self):
     return "{} {}".format(self.first_name, self.last_name)
