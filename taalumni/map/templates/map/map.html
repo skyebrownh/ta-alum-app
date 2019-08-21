@@ -33,7 +33,7 @@
         <div class="popup-info" id="{{ key }}">
           <div class="popup-header">
             <div class="crop">
-              <img src="{{ value.object.image.url }}" alt="{{ value.object.first_name }} {{ value.object.last_name }}" class="popup-img" />
+              <img src="{% if value.object.image %}{{ value.object.image.url }}{% else %}https://ta-alum-app.s3.amazonaws.com/media/Skye-placeholder.jpg{% endif %}" alt="{{ value.object.first_name }} {{ value.object.last_name }}" class="popup-img" />
             </div>
             <div class="vertical-divider"></div>
             <div class="person-info">
