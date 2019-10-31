@@ -1,14 +1,10 @@
 # Team Alpha Alumni App
 
-[Live site](http://taalum-app-dev.us-east-1.elasticbeanstalk.com/)
-
-***
 **Table Of Contents**
 
 - [Project Description](#project-description)
 - [Change log](#change-log)
 - [Project Status](#project-status)
-***
 
 #### Project description:
 - Displays members of Awesome Inc's Team Alpha Alumni members in their current location and other relevant information such as company, position, and contact information.
@@ -26,7 +22,7 @@
 
 ## Project Status
 
-- This site is currently being updated and improved upon by the author
+- This site is an old version of the new [Team Alpha Alumni App 2.0](https://github.com/skyebrownh/ta-alum-app-2)
 
 *Author Info:*
 - Skye Brown
